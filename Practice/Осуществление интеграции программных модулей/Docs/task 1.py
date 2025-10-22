@@ -1,14 +1,14 @@
 import os
 
 def quick_change_extension():
-    """Простая версия для быстрого изменения расширения"""
-    file_path = input("Введите путь к файлу: ").strip()
+    """изменение расширения"""
+    file_path = input("введите путь к файлу: ").strip()
     
     if not os.path.isfile(file_path):
-        print("Файл не найден!")
+        print("файл не найден")
         return
     
-    print("Выберите расширение: 1 - PNG, 2 - JPG")
+    print("выберите расширение: 1 - PNG, 2 - JPG")
     choice = input("Ваш выбор: ").strip()
     
     if choice == "1":
@@ -16,7 +16,7 @@ def quick_change_extension():
     elif choice == "2":
         new_ext = ".jpg"
     else:
-        print("Неверный выбор!")
+        print("неверный выбор")
         return
     
     # Создаем новое имя файла
@@ -27,6 +27,7 @@ def quick_change_extension():
     
     try:
         os.rename(file_path, new_file_path)
-        print(f"Файл переименован: {new_file_path}")
+        print(f"файл переименован: {new_file_path}")
     except Exception as e:
-        print(f"Ошибка: {e}")
+
+        print(f"ошибка: {e}")
